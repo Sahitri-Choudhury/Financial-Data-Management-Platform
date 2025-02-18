@@ -1,0 +1,107 @@
+/* General Table Styles */
+.table {
+    color: var(--primary-text);
+    background-color: var(--secondary-bg);
+    border-color: var(--border-color);
+    border-collapse: collapse;
+    width: 100%;
+}
+
+/* Header Styling */
+.table thead th {
+    background-color: var(--accent-dark);
+    color: var(--accent-yellow);
+    border-bottom: 2px solid var(--accent-yellow);
+    font-size: 1.1rem;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Body Cell Styling */
+.table tbody td {
+    background-color: var(--secondary-bg);
+    border-color: var(--border-color);
+    padding: 10px;
+}
+
+/* Row Hover Effect */
+.table tbody tr {
+    transition: all 0.2s ease;
+}
+
+.table tbody tr:hover {
+    background-color: #2a2a2a;
+    transform: scale(1.005);
+}
+
+/* Highlight text on hover */
+.table-hover tbody tr:hover td {
+    color: var(--accent-yellow);
+}
+
+/* Remove striped effect */
+.table-striped>tbody>tr:nth-of-type(odd)>* {
+    background-color: var(--secondary-bg);
+}
+
+/* Add subtle yellow border */
+.table-bordered {
+    border: 1px solid var(--accent-yellow);
+}
+
+.table-bordered th,
+.table-bordered td {
+    border: 1px solid var(--border-color);
+}
+
+/* --- View Account Table (No Hover, Slightly Different Style) --- */
+.view-account-table tbody tr {
+    transition: none;
+}
+
+
+.view-account-table tbody td {
+    color: var(--primary-text);
+    padding: 12px;
+}
+
+/* Slightly Different Borders for Clarity */
+.view-account-table.table-bordered {
+    border: 1px solid var(--border-color);
+}
+
+.view-account-table.table-bordered th,
+.view-account-table.table-bordered td {
+    border: 1px solid var(--border-color);
+}
+.hero-section {
+    background: url('{{ url_for("static", filename="bank-bg.jpg") }}') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+  }
+  .hero-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .hero-content {
+    position: relative;
+    z-index: 2;
+  }
+  .features-section {
+    padding: 50px 20px;
+  }
+  .feature-box {
+    padding: 20px;
+    border-radius: 10px;
+    background: #f8f9fa;
+    transition: transform 0.3s ease-in-out;
+  }
+  .feature-box:hover {
+    transform: scale(1.05);
+  }

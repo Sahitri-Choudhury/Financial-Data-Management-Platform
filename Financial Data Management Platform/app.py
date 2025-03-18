@@ -102,6 +102,6 @@ def delete_account():
     return render_template("delete_account.html")
 
 if __name__ == '__main__':
-    app.run(debug=True) hii
+    app.run(debug=True) hi
 
 
